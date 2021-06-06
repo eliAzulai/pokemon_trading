@@ -1,0 +1,32 @@
+{% load static %}
+{% load bootstrap5 %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}{% endblock title %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        {% block css %}
+        {% endblock %}
+    </head>
+    <body>
+        {% bootstrap_messages %}
+
+    <div class="container">
+        {% block content%}
+        {% endblock %}
+    </div>
+
+        
+
+        {% bootstrap_javascript %}    
+        {% block js %}
+        {% endblock %}  
+
+        <script src="" async defer></script>
+    </body>
+</html>
